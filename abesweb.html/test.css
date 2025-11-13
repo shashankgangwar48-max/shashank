@@ -1,0 +1,37 @@
+/* styles.css */
+/* Save this as styles.css in the same folder as index.html */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+  --border: #e6e9ef;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); margin:0; color:#111}
+.container{max-width:980px; margin:36px auto; padding:20px}
+.title{margin:0 0 16px; font-size:20px; text-align:center}
+
+.attendance{width:100%; border-collapse:collapse; background:var(--card); box-shadow:0 6px 18px rgba(20,30,40,0.05); border-radius:8px; overflow:hidden}
+.attendance thead th{background:#f1f5f9; padding:12px 10px; text-align:left; font-weight:600; border-bottom:1px solid var(--border)}
+.attendance td, .attendance th{padding:10px 8px; border-right:1px solid var(--border)}
+.attendance tr:last-child td{border-bottom:none}
+.attendance td{background:transparent}
+.attendance tbody tr:nth-child(even) td{background:#fbfdff}
+.attendance td:last-child, .attendance th:last-child{border-right:none}
+
+.sheet-heading{background:var(--accent); color:#fff; text-align:center; font-size:16px; padding:14px 8px}
+
+.legend{margin-top:12px; color:var(--muted); font-size:14px}
+
+/* Responsive */
+@media (max-width:720px){
+  .container{padding:12px}
+  .attendance thead tr:nth-child(2) {display:none} /* hide column headers on very small screens */
+  .attendance, .attendance tbody, .attendance tr, .attendance td{display:block; width:100%}
+  .attendance tr{margin-bottom:10px; border-bottom:1px solid var(--border)}
+  .attendance td{padding:8px 10px; border-right:none}
+  .attendance td:before{content:attr(data-label); font-weight:600; display:inline-block; width:120px}
+}
+
