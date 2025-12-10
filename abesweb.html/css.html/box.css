@@ -1,0 +1,90 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #076d4b;          /* dark blue background */
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 23px;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+/* Outer box (margin illustration) */
+.margin-box {
+  background: #af2908;          /* orange for margin */
+  padding: 23px;
+  position: relative;
+}
+
+/* Second box (border illustration) */
+.border-box {
+  background: #0b464e;          /* teal/blue for border */
+  padding: 23px;
+  position: relative;
+}
+
+/* Third box (padding illustration) */
+.padding-box {
+  background: #6621d4;          /* yellow for padding */
+  padding: 25px;
+  position: relative;
+}
+
+/* Innermost box (content) */
+.content-box {
+  background: #c0d408;          /* greenish for content */
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Labels */
+.label {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.margin-box > .label.top {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.border-box > .label {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.padding-box > .label {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-box > .label {
+  position: static;
+  margin: 0;
+}
